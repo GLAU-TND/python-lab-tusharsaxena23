@@ -6,15 +6,15 @@ def exceptionhandling():
     try:
         a+='abc'
     except TypeError as e:
-        print(e)
+        print(type(e).__name__,e)
     try:
         a.abcd()
     except AttributeError as e:
-        print(e)
+        print(type(e).__name__,e)
     try:
         int('sd')
     except ValueError as e:
-        print(e)
+        print(type(e).__name__,e)
     
 exceptionhandling()
     
